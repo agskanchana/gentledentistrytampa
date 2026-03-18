@@ -165,18 +165,79 @@
         .btn-text:hover { gap: 16px; color: var(--green-mid); }
         .btn-text:hover .arrow-circle { background: var(--green); border-color: var(--green); color: var(--white); }
 
-        /* ── ANNOUNCEMENT BAR ── */
-        .announce-bar {
+        /* ── TOP CONTACT BAR ── */
+        .top-bar {
             background: var(--green-dark);
-            padding: 9px 0;
-            text-align: center;
-            font-size: 13px; font-weight: 600;
+            padding: 10px 0;
+            font-size: 13px;
             color: rgba(255,255,255,0.9);
-            letter-spacing: 0.3px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
-        .announce-bar a { color: var(--gold); }
-        .announce-bar a:hover { color: #ffc040; }
-        .announce-bar i { margin-right: 6px; font-size: 11px; }
+        .top-bar-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+        .top-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .top-bar-left i {
+            color: var(--gold);
+            font-size: 13px;
+        }
+        .top-bar-left a {
+            color: rgba(255,255,255,0.85);
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        .top-bar-left a:hover {
+            color: var(--white);
+        }
+        .top-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        .top-bar-phone {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .top-bar-phone i {
+            color: var(--gold);
+            font-size: 13px;
+        }
+        .top-bar-phone .phone-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1;
+        }
+        .top-bar-phone .phone-number {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1;
+        }
+        .top-bar-phone .phone-number:hover {
+            color: var(--gold);
+        }
+        .top-bar-phone .phone-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .top-bar-sep {
+            width: 1px;
+            height: 28px;
+            background: rgba(255,255,255,0.15);
+        }
 
         /* ── HEADER ── */
         .site-header {
@@ -188,9 +249,9 @@
         .site-header.scrolled { box-shadow: 0 2px 32px rgba(0,0,0,0.09); }
         .header-wrap {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 12px 0;
+            padding: 10px 0;
         }
-        .site-logo img { max-height: 64px; width: auto; }
+        .site-logo img { max-height: 58px; width: auto; }
 
         /* Nav */
         .site-nav > ul { list-style: none; display: flex; align-items: center; gap: 2px; }
@@ -787,6 +848,9 @@
         }
 
         @media (max-width: 768px) {
+            .top-bar-inner { flex-direction: column; gap: 8px; }
+            .top-bar-right { gap: 16px; }
+            .top-bar-left { text-align: center; }
             .site-nav, .header-cta { display: none; }
             .site-nav.mobile-open {
                 display: block; position: fixed; inset: 0; top: 72px;
@@ -832,11 +896,35 @@
 </head>
 <body>
 
-    <!-- Announcement Bar -->
-    <div class="announce-bar">
-        <i class="fas fa-star"></i>
-        Trusted Tampa Dentist Since 1991 &mdash; Now Accepting New Patients!
-        <a href="https://www.gentledentistrytampa.com/appointment">&nbsp;Book Online &rarr;</a>
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-inner">
+                <div class="top-bar-left">
+                    <i class="fas fa-location-dot"></i>
+                    <a href="https://goo.gl/maps/FCMnUfA8d1eXCVJe7" target="_blank" rel="noopener noreferrer">
+                        3500 E. Fletcher Avenue &ndash; Suite #221, Tampa, FL 33613
+                    </a>
+                </div>
+                <div class="top-bar-right">
+                    <div class="top-bar-phone">
+                        <i class="fas fa-phone"></i>
+                        <div class="phone-info">
+                            <span class="phone-label">New Patients</span>
+                            <a href="tel:8137347102" class="phone-number">(813) 734-7102</a>
+                        </div>
+                    </div>
+                    <div class="top-bar-sep"></div>
+                    <div class="top-bar-phone">
+                        <i class="fas fa-phone"></i>
+                        <div class="phone-info">
+                            <span class="phone-label">Existing Patients</span>
+                            <a href="tel:8139723500" class="phone-number">(813) 972-3500</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Header -->
