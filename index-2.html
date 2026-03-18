@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentist Tampa FL - Whole-Health Dental Care | Gentle Dentistry</title>
+    <meta name="description" content="Looking for a dentist in Tampa, FL? Gentle Dentistry offers top-quality services for all your oral health needs. Schedule an appointment today!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ============================================
+           Gentle Dentistry Tampa — Blue Edition
+           Design: Split hero · Gold accents · Editorial
+           ============================================ */
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --green:        #005cb9;
+            --green-mid:    #1a73c7;
+            --green-dark:   #0a2540;
+            --green-light:  #e8f2fc;
+            --green-pale:   #f0f7ff;
+            --gold:         #f5a623;
+            --gold-dark:    #d4890a;
+            --gold-light:   #fff8eb;
+            --cream:        #f8f9fa;
+            --white:        #ffffff;
+            --dark:         #0a2540;
+            --text:         #333333;
+            --text-mid:     #5f6c7b;
+            --text-light:   #8a9198;
+            --border:       #e0e4e8;
+            --shadow:       0 4px 24px rgba(0,0,0,0.07);
+            --shadow-lg:    0 12px 48px rgba(0,0,0,0.13);
+            --shadow-xl:    0 24px 72px rgba(0,0,0,0.18);
+            --radius:       12px;
+            --radius-lg:    24px;
+            --transition:   0.3s ease;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Nunito', -apple-system, sans-serif;
+            font-size: 16px;
+            line-height: 1.75;
+            color: var(--text);
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: var(--green); text-decoration: none; transition: color var(--transition); }
+        a:hover { color: var(--green-mid); }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+
+        .container { max-width: 1220px; margin: 0 auto; padding: 0 28px; }
+
+        /* ── SCROLL ANIMATIONS ── */
+        @keyframes slideUp   { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
+        @keyframes slideLeft { from { opacity:0; transform:translateX(-40px); } to { opacity:1; transform:translateX(0); } }
+        @keyframes slideRight{ from { opacity:0; transform:translateX(40px); } to { opacity:1; transform:translateX(0); } }
+        @keyframes scaleIn   { from { opacity:0; transform:scale(0.92); } to { opacity:1; transform:scale(1); } }
+        .anim { opacity: 0; }
+        .anim.is-visible.up    { animation: slideUp   0.7s ease forwards; }
+        .anim.is-visible.left  { animation: slideLeft 0.7s ease forwards; }
+        .anim.is-visible.right { animation: slideRight 0.7s ease forwards; }
+        .anim.is-visible.scale { animation: scaleIn  0.6s ease forwards; }
+
+        /* ── GOLD DIVIDER ── */
+        .gold-rule {
+            display: flex; align-items: center; gap: 12px;
+            margin-bottom: 18px;
+        }
+        .gold-rule::before {
+            content: ''; width: 48px; height: 2px;
+            background: var(--gold); flex-shrink: 0;
+        }
+        .gold-rule span {
+            font-family: 'Nunito', sans-serif;
+            font-size: 11px; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 3.5px;
+            color: var(--gold);
+        }
+        .gold-rule.center { justify-content: center; }
+        .gold-rule.center::before { display: none; }
+
+        /* ── BUTTONS ── */
+        .btn {
+            display: inline-block;
+            font-family: 'Nunito', sans-serif;
+            font-size: 13px; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 1.5px;
+            padding: 14px 34px;
+            border-radius: 6px;
+            transition: all var(--transition);
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        .btn-green {
+            background: var(--green);
+            color: var(--white);
+            border-color: var(--green);
+        }
+        .btn-green:hover {
+            background: var(--green-dark);
+            border-color: var(--green-dark);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(0,92,185,0.35);
+        }
+        .btn-gold {
+            background: var(--gold);
+            color: var(--white);
+            border-color: var(--gold);
+        }
+        .btn-gold:hover {
+            background: var(--gold-dark);
+            border-color: var(--gold-dark);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(245,166,35,0.35);
+        }
+        .btn-outline-green {
+            background: transparent;
+            color: var(--green);
+            border-color: var(--green);
+        }
+        .btn-outline-green:hover {
+            background: var(--green);
+            color: var(--white);
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border-color: rgba(255,255,255,0.6);
+        }
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--green);
+            border-color: var(--white);
+        }
+        .btn-text {
+            display: inline-flex; align-items: center; gap: 10px;
+            font-size: 14px; font-weight: 700;
+            color: var(--green); background: none; border: none;
+            padding: 0; text-transform: uppercase; letter-spacing: 1px;
+            cursor: pointer; transition: gap var(--transition);
+        }
+        .btn-text .arrow-circle {
+            width: 36px; height: 36px; border-radius: 50%;
+            border: 2px solid currentColor;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 12px; flex-shrink: 0;
+            transition: all var(--transition);
+        }
+        .btn-text:hover { gap: 16px; color: var(--green-mid); }
+        .btn-text:hover .arrow-circle { background: var(--green); border-color: var(--green); color: var(--white); }
+
+        /* ── ANNOUNCEMENT BAR ── */
+        .announce-bar {
+            background: var(--green-dark);
+            padding: 9px 0;
+            text-align: center;
+            font-size: 13px; font-weight: 600;
+            color: rgba(255,255,255,0.9);
+            letter-spacing: 0.3px;
+        }
+        .announce-bar a { color: var(--gold); }
+        .announce-bar a:hover { color: #ffc040; }
+        .announce-bar i { margin-right: 6px; font-size: 11px; }
+
+        /* ── HEADER ── */
+        .site-header {
+            background: var(--white);
+            position: sticky; top: 0; z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow var(--transition);
+        }
+        .site-header.scrolled { box-shadow: 0 2px 32px rgba(0,0,0,0.09); }
+        .header-wrap {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 12px 0;
+        }
+        .site-logo img { max-height: 64px; width: auto; }
+
+        /* Nav */
+        .site-nav > ul { list-style: none; display: flex; align-items: center; gap: 2px; }
+        .site-nav > ul > li > a {
+            display: block; padding: 10px 14px;
+            font-size: 14px; font-weight: 600;
+            color: var(--text);
+            border-bottom: 2px solid transparent;
+            transition: all var(--transition);
+        }
+        .site-nav > ul > li > a:hover, .site-nav > ul > li > a.active {
+            color: var(--green); border-color: var(--green);
+        }
+        .site-nav > ul > li > a i { font-size: 9px; margin-left: 4px; }
+
+        /* Dropdowns */
+        .has-dd { position: relative; }
+        .dd-menu {
+            position: absolute; top: 100%; left: 0;
+            min-width: 220px;
+            background: var(--white);
+            border: none;
+            border-top: 3px solid var(--green);
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            padding: 12px 0;
+            opacity: 0; visibility: hidden;
+            transform: translateY(6px);
+            transition: all 0.25s ease;
+            z-index: 200;
+            list-style: none;
+            display: block;
+        }
+        .has-dd:hover > .dd-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dd-menu li { display: block; list-style: none; }
+        .dd-menu li a {
+            display: block; padding: 9px 22px;
+            font-size: 13.5px; font-weight: 500;
+            color: var(--text); border: none; border-bottom: none;
+            transition: all 0.2s ease;
+        }
+        .dd-menu li a:hover { color: var(--green); background: var(--green-light); padding-left: 28px; }
+
+        /* Mega menu */
+        .dd-mega {
+            min-width: 960px; left: 50%;
+            transform: translateX(-50%) translateY(6px);
+            display: grid; grid-template-columns: repeat(5, 1fr);
+            gap: 0; padding: 28px 24px;
+            border-top: 3px solid var(--green);
+            border-radius: 0 0 8px 8px;
+        }
+        .has-dd:hover > .dd-mega { transform: translateX(-50%) translateY(0); opacity: 1; visibility: visible; }
+        .dd-group { padding: 0 14px; }
+        .dd-group + .dd-group { border-left: 1px solid var(--border); }
+        .dd-group-label {
+            font-size: 11px; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 1.5px;
+            color: var(--green); padding: 0 0 8px;
+            border-bottom: 2px solid var(--green);
+            margin-bottom: 12px; display: block;
+        }
+        .dd-group ul { list-style: none; display: block; }
+        .dd-group ul li { display: block; }
+        .dd-group ul li a {
+            display: block; padding: 6px 0; border: none; border-bottom: none;
+            font-size: 13.5px; color: var(--text);
+            font-weight: 400;
+            transition: all 0.2s ease;
+        }
+        .dd-group ul li a:hover { color: var(--green); padding-left: 4px; background: transparent; }
+
+        .header-cta { margin-left: 20px; }
+
+        /* Mobile toggle */
+        .nav-toggle {
+            display: none; flex-direction: column; gap: 5px;
+            background: none; border: none; cursor: pointer; padding: 8px;
+        }
+        .nav-toggle span {
+            display: block; width: 26px; height: 2px;
+            background: var(--text); border-radius: 2px;
+            transition: all var(--transition);
+        }
+        .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+        .nav-toggle.open span:nth-child(2) { opacity: 0; }
+        .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+        /* ── HERO — SPLIT PANEL ── */
+        .hero {
+            display: grid; grid-template-columns: 1fr 1fr;
+            min-height: 90vh; overflow: hidden;
+        }
+        .hero-image-panel {
+            position: relative; overflow: hidden;
+        }
+        .hero-image-panel img {
+            width: 100%; height: 100%;
+            object-fit: cover; object-position: center top;
+            display: block;
+        }
+        .hero-image-panel::after {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(to right, rgba(10,37,64,0.35) 0%, transparent 60%);
+        }
+        .hero-content-panel {
+            background: var(--green-dark);
+            display: flex; flex-direction: column; justify-content: center;
+            padding: 80px 72px;
+            position: relative; overflow: hidden;
+        }
+        .hero-content-panel::before {
+            content: '';
+            position: absolute; bottom: -80px; right: -80px;
+            width: 380px; height: 380px;
+            border-radius: 50%;
+            border: 60px solid rgba(0,92,185,0.12);
+        }
+        .hero-content-panel::after {
+            content: '';
+            position: absolute; top: -40px; left: -40px;
+            width: 200px; height: 200px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.03);
+        }
+        .hero-eyebrow {
+            display: inline-flex; align-items: center; gap: 10px;
+            font-size: 12px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3px;
+            color: var(--gold); margin-bottom: 24px;
+        }
+        .hero-eyebrow span { display: inline-block; width: 32px; height: 1px; background: var(--gold); }
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 68px; font-weight: 600;
+            color: var(--white); line-height: 1.05;
+            margin-bottom: 24px;
+        }
+        .hero h1 em { font-style: italic; color: #8cc0f4; }
+        .hero-desc {
+            font-size: 17px; font-weight: 400;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8; margin-bottom: 40px;
+            max-width: 440px;
+        }
+        .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+        .hero-proof {
+            display: flex; gap: 28px; align-items: center;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+        }
+        .hero-proof-item {
+            display: flex; flex-direction: column;
+        }
+        .hero-proof-item strong {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px; font-weight: 700; color: var(--white);
+            line-height: 1;
+        }
+        .hero-proof-item span {
+            font-size: 12px; color: rgba(255,255,255,0.55);
+            text-transform: uppercase; letter-spacing: 1px; margin-top: 4px;
+        }
+        .hero-proof-sep { width: 1px; height: 44px; background: rgba(255,255,255,0.15); }
+
+        /* Floating card on hero image */
+        .hero-float-badge {
+            position: absolute;
+            bottom: 40px; right: -30px;
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 18px 22px;
+            box-shadow: var(--shadow-xl);
+            z-index: 2;
+            display: flex; align-items: center; gap: 16px;
+            min-width: 240px;
+        }
+        .hero-float-badge .badge-icon {
+            width: 52px; height: 52px; border-radius: 50%;
+            background: var(--green-light);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--green); font-size: 22px; flex-shrink: 0;
+        }
+        .hero-float-badge strong { display: block; font-weight: 800; font-size: 14px; color: var(--dark); }
+        .hero-float-badge span { font-size: 12px; color: var(--text-mid); }
+
+        /* ── TRUST BAR ── */
+        .trust-bar {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 0;
+        }
+        .trust-bar-grid {
+            display: grid; grid-template-columns: repeat(5, 1fr);
+        }
+        .trust-item {
+            display: flex; flex-direction: column; align-items: center;
+            padding: 28px 20px; text-align: center;
+            border-right: 1px solid var(--border);
+            gap: 8px; transition: background var(--transition);
+        }
+        .trust-item:last-child { border-right: none; }
+        .trust-item:hover { background: var(--green-pale); }
+        .trust-item i { font-size: 22px; color: var(--green); }
+        .trust-item strong { font-size: 13px; font-weight: 700; color: var(--dark); }
+        .trust-item span { font-size: 12px; color: var(--text-light); }
+
+        /* ── WELCOME SECTION ── */
+        .welcome-section { padding: 110px 0; background: var(--cream); }
+        .welcome-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .welcome-visual { position: relative; }
+        .welcome-visual .main-img {
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            width: 100%; object-fit: cover;
+        }
+        .welcome-visual .accent-block {
+            position: absolute; bottom: -28px; right: -28px;
+            width: 180px; height: 180px;
+            background: var(--gold);
+            border-radius: var(--radius);
+            z-index: -1; opacity: 0.18;
+        }
+        .welcome-visual .stat-badge {
+            position: absolute; top: -20px; left: -20px;
+            background: var(--green-dark);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            color: var(--white); text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+        .welcome-visual .stat-badge strong {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 44px; font-weight: 700; color: var(--white);
+            display: block; line-height: 1;
+        }
+        .welcome-visual .stat-badge span { font-size: 12px; color: rgba(255,255,255,0.6); }
+        .welcome-text h2 {
+            font-size: 46px; font-weight: 600;
+            margin-bottom: 22px; color: var(--dark);
+        }
+        .welcome-text p {
+            font-size: 16px; color: var(--text-mid);
+            line-height: 1.85; margin-bottom: 28px;
+        }
+        .welcome-list { list-style: none; margin-bottom: 36px; }
+        .welcome-list li {
+            display: flex; align-items: flex-start; gap: 12px;
+            font-size: 15px; font-weight: 500; color: var(--text);
+            margin-bottom: 14px;
+        }
+        .welcome-list li i {
+            color: var(--green); font-size: 14px;
+            margin-top: 4px; flex-shrink: 0;
+        }
+
+        /* ── SERVICES SECTION ── */
+        .services-section { padding: 110px 0; background: var(--green-dark); }
+        .section-head { text-align: center; margin-bottom: 60px; }
+        .section-head h2 { font-size: 48px; font-weight: 600; }
+        .section-head p { font-size: 17px; max-width: 560px; margin: 12px auto 0; }
+        .section-head.light h2 { color: var(--white); }
+        .section-head.light p { color: rgba(255,255,255,0.6); }
+        .section-head.light .gold-rule span { color: var(--gold); }
+
+        .services-mosaic {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 300px 300px;
+            gap: 16px;
+        }
+        .svc-tile {
+            position: relative; overflow: hidden;
+            border-radius: var(--radius); cursor: pointer;
+        }
+        .svc-tile:first-child { grid-row: span 2; }
+        .svc-tile img {
+            width: 100%; height: 100%;
+            object-fit: cover; display: block;
+            transition: transform 0.6s ease;
+        }
+        .svc-tile:hover img { transform: scale(1.07); }
+        .svc-tile-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(10,37,64,0.9) 0%, rgba(10,37,64,0.25) 60%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 28px 26px;
+            transition: background var(--transition);
+        }
+        .svc-tile:hover .svc-tile-overlay { background: linear-gradient(to top, rgba(10,37,64,0.95) 0%, rgba(10,37,64,0.5) 70%, rgba(10,37,64,0.1) 100%); }
+        .svc-tile-label {
+            font-size: 10px; font-weight: 800; text-transform: uppercase;
+            letter-spacing: 2.5px; color: var(--gold); margin-bottom: 6px;
+        }
+        .svc-tile h3 {
+            font-size: 22px; font-weight: 600; color: var(--white);
+            font-family: 'Cormorant Garamond', serif; margin-bottom: 12px;
+        }
+        .svc-tile p {
+            font-size: 14px; color: rgba(255,255,255,0.7);
+            line-height: 1.6; opacity: 0;
+            transform: translateY(6px);
+            transition: all 0.35s ease;
+            margin-bottom: 14px;
+        }
+        .svc-tile:hover p { opacity: 1; transform: translateY(0); }
+        .svc-tile-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-size: 12px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1px; color: var(--gold);
+            opacity: 0; transform: translateY(6px);
+            transition: all 0.35s ease 0.05s;
+        }
+        .svc-tile:hover .svc-tile-link { opacity: 1; transform: translateY(0); }
+
+        /* ── DOCTOR SECTION ── */
+        .doctor-section { padding: 110px 0; background: var(--cream); }
+        .doctor-grid { display: grid; grid-template-columns: 420px 1fr; gap: 80px; align-items: center; }
+        .doctor-photo-wrap { position: relative; }
+        .doctor-photo-wrap .main-photo {
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            width: 100%; object-fit: cover;
+        }
+        .doctor-photo-wrap .name-plate {
+            position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%);
+            background: var(--gold);
+            color: var(--white); font-weight: 800;
+            font-size: 12px; text-transform: uppercase; letter-spacing: 2px;
+            padding: 12px 28px;
+            border-radius: 4px;
+            white-space: nowrap;
+            box-shadow: 0 4px 16px rgba(245,166,35,0.4);
+        }
+        .doctor-content h2 { font-size: 44px; margin-bottom: 12px; }
+        .doctor-content .title-tag {
+            display: inline-block;
+            background: var(--green-light); color: var(--green);
+            font-size: 12px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 1.5px;
+            padding: 6px 14px; border-radius: 4px;
+            margin-bottom: 22px;
+        }
+        .doctor-content p { font-size: 16px; color: var(--text-mid); margin-bottom: 20px; line-height: 1.85; }
+        .doctor-blockquote {
+            border-left: 4px solid var(--gold);
+            padding: 16px 24px;
+            background: var(--gold-light);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 28px 0;
+        }
+        .doctor-blockquote p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px; font-style: italic;
+            color: var(--dark); margin: 0; font-weight: 500;
+        }
+
+        /* ── FEATURES STRIP ── */
+        .features-strip { padding: 80px 0; background: var(--green); }
+        .features-strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+        .fs-item {
+            padding: 36px 28px;
+            border-right: 1px solid rgba(255,255,255,0.12);
+            text-align: center;
+            transition: background var(--transition);
+        }
+        .fs-item:last-child { border-right: none; }
+        .fs-item:hover { background: rgba(255,255,255,0.06); }
+        .fs-icon {
+            width: 64px; height: 64px; border-radius: 50%;
+            background: rgba(255,255,255,0.12);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 18px;
+            color: var(--white); font-size: 24px;
+            transition: all var(--transition);
+        }
+        .fs-item:hover .fs-icon { background: var(--gold); color: var(--white); }
+        .fs-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px; font-weight: 600;
+            color: var(--white); margin-bottom: 8px;
+        }
+        .fs-item p { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.6; }
+
+        /* ── TESTIMONIALS ── */
+        .testimonials-section { padding: 110px 0; background: var(--white); }
+        .testimonials-layout { display: grid; grid-template-columns: 340px 1fr; gap: 64px; align-items: start; }
+        .testimonials-intro h2 { font-size: 44px; line-height: 1.15; margin-bottom: 18px; }
+        .testimonials-intro p { font-size: 16px; color: var(--text-mid); margin-bottom: 28px; }
+        .overall-rating {
+            background: var(--green-pale); border-radius: var(--radius);
+            padding: 22px 24px; display: flex; align-items: center; gap: 18px;
+        }
+        .rating-score {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 52px; font-weight: 700; color: var(--green); line-height: 1;
+        }
+        .rating-stars { color: #F5A623; font-size: 16px; margin-bottom: 4px; }
+        .rating-count { font-size: 13px; color: var(--text-mid); }
+
+        .testimonials-cards { display: flex; flex-direction: column; gap: 20px; }
+        .t-card {
+            background: var(--cream);
+            border-radius: var(--radius);
+            padding: 30px 32px;
+            border: 1px solid var(--border);
+            position: relative;
+            transition: all var(--transition);
+        }
+        .t-card:hover { border-color: var(--green); box-shadow: var(--shadow-lg); }
+        .t-card .quote-mark {
+            position: absolute; top: 24px; right: 26px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 72px; line-height: 1; color: var(--green-light);
+            font-weight: 700;
+        }
+        .t-card .t-stars { color: #F5A623; font-size: 13px; margin-bottom: 12px; }
+        .t-card .t-text { font-size: 15px; color: var(--text-mid); line-height: 1.75; margin-bottom: 18px; font-style: italic; }
+        .t-author { display: flex; align-items: center; gap: 12px; }
+        .t-avatar {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--green) 0%, #05407b 100%);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-weight: 700; font-size: 15px; flex-shrink: 0;
+        }
+        .t-name { font-weight: 700; font-size: 14px; color: var(--dark); }
+        .t-source { font-size: 12px; color: var(--text-light); display: flex; align-items: center; gap: 5px; }
+        .t-source i { color: #4285f4; }
+
+        /* ── CTA BAND ── */
+        .cta-band {
+            position: relative;
+            background-size: cover; background-position: center;
+            min-height: 520px; display: flex; align-items: center;
+        }
+        .cta-band-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(105deg, rgba(10,37,64,0.92) 0%, rgba(0,92,185,0.7) 50%, rgba(0,0,0,0.3) 100%);
+        }
+        .cta-band .container { position: relative; z-index: 1; }
+        .cta-band-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .cta-band-text h2 {
+            font-size: 52px; font-weight: 600; color: var(--white);
+            line-height: 1.1; margin-bottom: 18px;
+        }
+        .cta-band-text p { font-size: 17px; color: rgba(255,255,255,0.75); margin-bottom: 36px; }
+        .cta-band-text .btn { margin-right: 12px; }
+        .cta-checklist { list-style: none; }
+        .cta-checklist li {
+            display: flex; align-items: center; gap: 14px;
+            font-size: 15px; font-weight: 600; color: var(--white);
+            margin-bottom: 16px;
+        }
+        .cta-checklist li .check {
+            width: 30px; height: 30px; border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--gold); font-size: 13px; flex-shrink: 0;
+        }
+
+        /* ── BLOG SECTION ── */
+        .blog-section { padding: 110px 0; background: var(--cream); }
+        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .blog-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all var(--transition);
+        }
+        .blog-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: transparent; }
+        .blog-thumb { height: 220px; overflow: hidden; position: relative; }
+        .blog-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .blog-card:hover .blog-thumb img { transform: scale(1.06); }
+        .blog-category {
+            position: absolute; top: 14px; left: 14px;
+            background: var(--green);
+            color: var(--white); font-size: 10px; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 2px;
+            padding: 5px 12px; border-radius: 4px;
+        }
+        .blog-body { padding: 24px 26px; }
+        .blog-date { font-size: 12px; color: var(--text-light); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+        .blog-date i { color: var(--gold); }
+        .blog-body h3 {
+            font-size: 19px; font-weight: 600; color: var(--dark);
+            margin-bottom: 10px; font-family: 'Cormorant Garamond', serif;
+            line-height: 1.35;
+        }
+        .blog-body h3 a { color: var(--dark); }
+        .blog-body h3 a:hover { color: var(--green); }
+        .blog-body p { font-size: 14px; color: var(--text-mid); line-height: 1.65; margin-bottom: 18px; }
+        .blog-footer {
+            display: flex; align-items: center; justify-content: space-between;
+            padding-top: 16px; border-top: 1px solid var(--border);
+        }
+        .blog-author { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--text); }
+        .blog-author i { color: var(--green); }
+
+        /* ── CONTACT SECTION ── */
+        .contact-section { padding: 0; background: var(--white); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; }
+        .contact-info-panel {
+            background: var(--green-dark);
+            padding: 80px 60px; display: flex; flex-direction: column; justify-content: center;
+        }
+        .contact-info-panel h2 { font-size: 42px; color: var(--white); margin-bottom: 12px; }
+        .contact-info-panel .subtitle { font-size: 16px; color: rgba(255,255,255,0.55); margin-bottom: 48px; }
+        .contact-items { display: flex; flex-direction: column; gap: 28px; }
+        .contact-item-row { display: flex; align-items: flex-start; gap: 18px; }
+        .contact-icon-circle {
+            width: 52px; height: 52px; border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--gold); font-size: 18px; flex-shrink: 0;
+        }
+        .contact-item-text strong { display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gold); margin-bottom: 6px; }
+        .contact-item-text a, .contact-item-text span { color: rgba(255,255,255,0.85); font-size: 15px; line-height: 1.6; }
+        .contact-item-text a:hover { color: var(--white); }
+        .contact-map-panel { line-height: 0; }
+        .contact-map-panel iframe { display: block; width: 100%; height: 100%; min-height: 460px; }
+
+        /* ── FOOTER ── */
+        .site-footer { background: var(--dark); padding: 70px 0 0; }
+        .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 48px; margin-bottom: 0; }
+        .footer-brand { }
+        .footer-brand img { max-height: 60px; margin-bottom: 16px; filter: brightness(0) invert(1) opacity(0.85); }
+        .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.75; margin-bottom: 24px; max-width: 280px; }
+        .social-row { display: flex; gap: 10px; }
+        .social-row a {
+            width: 36px; height: 36px; border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.15);
+            display: flex; align-items: center; justify-content: center;
+            color: rgba(255,255,255,0.5); font-size: 14px;
+            transition: all var(--transition);
+        }
+        .social-row a:hover { background: var(--green); border-color: var(--green); color: var(--white); }
+        .footer-col h5 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 12px; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 2px;
+            color: var(--gold); margin-bottom: 20px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul li a { color: rgba(255,255,255,0.45); font-size: 14px; transition: all var(--transition); }
+        .footer-col ul li a:hover { color: var(--white); padding-left: 4px; }
+        .hours-grid { }
+        .hours-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 13px; }
+        .hours-row .day { color: rgba(255,255,255,0.65); font-weight: 600; }
+        .hours-row .time { color: rgba(255,255,255,0.4); }
+        .hours-row .closed { color: rgba(255,107,107,0.7); }
+        .footer-bottom {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 22px 0;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            margin-top: 48px;
+        }
+        .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.3); }
+        .footer-bottom a { color: rgba(255,255,255,0.3); }
+        .footer-bottom a:hover { color: var(--white); }
+        .footer-legal-links { display: flex; gap: 20px; }
+        .footer-legal-links a { font-size: 12px; color: rgba(255,255,255,0.25); }
+        .footer-legal-links a:hover { color: rgba(255,255,255,0.7); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1100px) {
+            .dd-mega { min-width: 760px; grid-template-columns: repeat(3, 1fr); }
+            .hero { grid-template-columns: 1fr; min-height: auto; }
+            .hero-image-panel { height: 55vw; min-height: 360px; }
+            .hero-float-badge { right: 20px; }
+            .hero-content-panel { padding: 60px 40px; }
+            .hero h1 { font-size: 52px; }
+            .doctor-grid { grid-template-columns: 320px 1fr; gap: 52px; }
+            .testimonials-layout { grid-template-columns: 280px 1fr; gap: 44px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+        }
+
+        @media (max-width: 900px) {
+            .trust-bar-grid { grid-template-columns: repeat(3, 1fr); }
+            .trust-item:nth-child(3) { border-right: none; }
+            .trust-item:nth-child(4), .trust-item:nth-child(5) { border-top: 1px solid var(--border); }
+            .welcome-grid, .doctor-grid, .cta-band-grid { grid-template-columns: 1fr; gap: 48px; }
+            .doctor-photo-wrap .name-plate { left: 50%; }
+            .services-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+            .svc-tile:first-child { grid-row: span 1; }
+            .features-strip-grid { grid-template-columns: 1fr 1fr; }
+            .fs-item:nth-child(2) { border-right: none; }
+            .testimonials-layout { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .contact-map-panel iframe { height: 320px; }
+            .blog-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .site-nav, .header-cta { display: none; }
+            .site-nav.mobile-open {
+                display: block; position: fixed; inset: 0; top: 72px;
+                background: var(--white); overflow-y: auto; padding: 24px;
+                z-index: 999;
+            }
+            .site-nav.mobile-open ul { flex-direction: column; }
+            .site-nav.mobile-open .dd-menu,
+            .site-nav.mobile-open .dd-mega {
+                position: static; opacity: 1; visibility: visible;
+                transform: none; min-width: 0;
+                display: none; grid-template-columns: 1fr;
+                border: none; border-top: none; box-shadow: none;
+                padding: 8px 0 8px 12px;
+            }
+            .site-nav.mobile-open .has-dd.dd-open > .dd-menu,
+            .site-nav.mobile-open .has-dd.dd-open > .dd-mega {
+                display: block;
+            }
+            .site-nav.mobile-open .dd-mega {
+                display: none;
+            }
+            .site-nav.mobile-open .has-dd.dd-open > .dd-mega {
+                display: block;
+            }
+            .site-nav.mobile-open .dd-group { padding: 0 0 12px; }
+            .nav-toggle { display: flex; }
+            .hero { grid-template-columns: 1fr; }
+            .hero-content-panel { padding: 52px 28px; }
+            .hero h1 { font-size: 42px; }
+            .hero-proof { gap: 18px; }
+            .hero-proof-item strong { font-size: 26px; }
+            .services-mosaic { grid-template-columns: 1fr; }
+            .svc-tile p, .svc-tile-link { opacity: 1; transform: none; }
+            .features-strip-grid { grid-template-columns: 1fr 1fr; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+            .footer-legal-links { flex-wrap: wrap; justify-content: center; }
+            .contact-info-panel { padding: 52px 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announce-bar">
+        <i class="fas fa-star"></i>
+        Trusted Tampa Dentist Since 1991 &mdash; Now Accepting New Patients!
+        <a href="https://www.gentledentistrytampa.com/appointment">&nbsp;Book Online &rarr;</a>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="container">
+            <div class="header-wrap">
+                <a href="/" class="site-logo">
+                    <img src="assets/images/logo.png" alt="Gentle Dentistry Tampa" width="160">
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="site-nav" id="siteNav">
+                    <ul>
+                        <li><a href="/" class="active">Home</a></li>
+                        <li class="has-dd">
+                            <a href="https://www.gentledentistrytampa.com/about-us/">About Us <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dd-menu">
+                                <li><a href="https://www.gentledentistrytampa.com/meet-your-doctor/">Meet Your Doctor</a></li>
+                                <li><a href="https://www.gentledentistrytampa.com/meet-our-team/">Meet Our Team</a></li>
+                                <li><a href="https://www.gentledentistrytampa.com/in-honor-of-dr-angela-rasmussen/">In Honor of Dr. Rasmussen</a></li>
+                                <li><a href="https://www.gentledentistrytampa.com/blog/">Blog</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dd">
+                            <a href="#">New Patients <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dd-menu">
+                                <li><a href="https://www.gentledentistrytampa.com/your-first-visit/">Your First Visit</a></li>
+                                <li><a href="https://www.gentledentistrytampa.com/our-comfort-menu/">Our Comfort Menu</a></li>
+                                <li><a href="https://www.gentledentistrytampa.com/new-patient-forms/">New Patient Forms</a></li>
+                                <li><a href="https://www.gentledentistrytampa.com/dental-savings-plan/">Dental Savings Plan</a></li>
+                                <li><a href="https://www.gentledentistrytampa.com/insurance-friendly/">Insurance Friendly</a></li>
+                                <li><a href="https://www.gentledentistrytampa.com/flexible-payment-options/">Flexible Payment Options</a></li>
+                                <li><a href="https://www.gentledentistrytampa.com/payment-plans/">Payment Plans</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dd">
+                            <a href="#">Services <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dd-menu dd-mega">
+                                <li class="dd-group">
+                                    <span class="dd-group-label">Cosmetic Dentistry</span>
+                                    <ul>
+                                        <li><a href="https://www.gentledentistrytampa.com/porcelain-veneers/">Porcelain Veneers</a></li>
+                                        <li><a href="https://www.gentledentistrytampa.com/teeth-whitening/">Teeth Whitening</a></li>
+                                        <li><a href="https://www.gentledentistrytampa.com/dental-bonding/">Dental Bonding</a></li>
+                                        <li><a href="https://www.gentledentistrytampa.com/suresmile/">SureSmile</a></li>
+                                        <li><a href="https://www.gentledentistrytampa.com/porcelain-crowns/">Porcelain Crowns</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dd-group">
+                                    <span class="dd-group-label">Restorative Dentistry</span>
+                                    <ul>
+                                        <li><a href="https://www.gentledentistrytampa.com/tooth-colored-fillings/">Tooth Colored Fillings</a></li>
+                                        <li><a href="https://www.gentledentistrytampa.com/dental-implants/">Dental Implants</a></li>
+                                        <li><a href="https://www.gentledentistrytampa.com/dentures/">Dentures</a></li>
+                                        <li><a href="https://www.gentledentistrytampa.com/full-mouth-reconstruction/">Full Mouth Reconstruction</a></li>
+                                        <li><a href="https://www.gentledentistrytampa.com/overdentures/">Overdentures</a></li>
+                                        <li><a href="https://www.gentledentistrytampa.com/implant-crowns/">Implant Crowns</a></li>
+                                        <li><a href="https://www.gentledentistrytampa.com/dental-bridges/">Dental Bridges</a></li>
+                                        <li><a href="https://www.gentledentistrytampa.com/tmj/">TMJ</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dd-group">
+                                    <span class="dd-group-label">Preventive Dentistry</span>
+                                    <ul>
+                                        <li><a href="https://www.gentledentistrytampa.com/salivary-testing/">Salivary Testing</a></li>
+                                        <li><a href="https://www.gentledentistrytampa.com/oral-cancer-screenings/">Oral Cancer Screenings</a></li>
+                                        <li><a href="https://www.gentledentistrytampa.com/oral-hygiene/">Oral Hygiene</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dd-group">
+                                    <span class="dd-group-label">Facial Aesthetics</span>
+                                    <ul>
+                                        <li><a href="https://www.gentledentistrytampa.com/botox/">Botox</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dd-group">
+                                    <span class="dd-group-label">General Dentistry</span>
+                                    <ul>
+                                        <li><a href="https://www.gentledentistrytampa.com/emergency-dentistry/">Emergency Dentistry</a></li>
+                                        <li><a href="https://www.gentledentistrytampa.com/specialties/">Specialties</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.gentledentistrytampa.com/reputation/">Reputation</a></li>
+                        <li><a href="https://www.gentledentistrytampa.com/smile-gallery/">Smile Gallery</a></li>
+                        <li><a href="https://www.gentledentistrytampa.com/contact-us/">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <a href="https://www.gentledentistrytampa.com/appointment" class="btn btn-green header-cta">Book Appointment</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero — Split Panel -->
+    <section class="hero">
+        <!-- Left: photo panel -->
+        <div class="hero-image-panel">
+            <img src="assets/images/hero-banners-1.jpg" alt="Gentle Dentistry Tampa">
+        </div>
+        <!-- Right: content panel -->
+        <div class="hero-content-panel">
+            <div class="hero-eyebrow">
+                <span></span> Gentle Dentistry Tampa, FL
+            </div>
+            <h1>Your Smile<br>Deserves <em>Gentle</em><br>Expert Care</h1>
+            <p class="hero-desc">
+                Comprehensive dental care in a warm, welcoming environment. From routine cleanings to full-mouth transformations — all under one roof.
+            </p>
+            <div class="hero-actions">
+                <a href="https://www.gentledentistrytampa.com/appointment" class="btn btn-gold">Book an Appointment</a>
+                <a href="https://www.gentledentistrytampa.com/dental-savings-plan/" class="btn btn-outline-white">Savings Plan</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-bar-grid">
+            <div class="trust-item">
+                <i class="fas fa-shield-alt"></i>
+                <strong>Insurance Friendly</strong>
+                <span>Most plans accepted</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-calendar-check"></i>
+                <strong>Easy Scheduling</strong>
+                <span>Online booking 24/7</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-hand-holding-heart"></i>
+                <strong>Gentle Approach</strong>
+                <span>Comfort-first care</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-users"></i>
+                <strong>Family Dentistry</strong>
+                <span>All ages welcome</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-ambulance"></i>
+                <strong>Emergency Care</strong>
+                <span>Same-day availability</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome / About Section -->
+    <section class="welcome-section">
+        <div class="container">
+            <div class="welcome-grid">
+                <div class="welcome-visual anim left">
+                    <div class="stat-badge">
+                        <strong>30+</strong>
+                        <span>Years in Tampa</span>
+                    </div>
+                    <img src="assets/images/home-page-about-image-scaled.jpg"
+                         alt="Gentle Dentistry office" class="main-img" loading="lazy">
+                    <div class="accent-block"></div>
+                </div>
+                <div class="welcome-text anim right">
+                    <div class="gold-rule"><span>Welcome to Gentle Dentistry</span></div>
+                    <h2>General, Cosmetic &amp; Restorative Dental Solutions</h2>
+                    <p>
+                        Dr. Loc Tong and his dedicated team believe in providing the best possible care to
+                        patients in and around the Tampa community. Our mission is to offer the finest cosmetic
+                        and restorative dental care alongside unsurpassed customer service.
+                    </p>
+                    <p>
+                        As a team of expert and enthusiastic professionals, we continually challenge ourselves
+                        to be leaders in our field — linking your oral health to your overall well-being.
+                    </p>
+                    <ul class="welcome-list">
+                        <li><i class="fas fa-check-circle"></i> Personalized care plans for every patient</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced technology for precise, comfortable treatment</li>
+                        <li><i class="fas fa-check-circle"></i> Transparent pricing with flexible payment options</li>
+                        <li><i class="fas fa-check-circle"></i> Comprehensive services for the whole family</li>
+                    </ul>
+                    <a href="https://www.gentledentistrytampa.com/about-us/" class="btn btn-green">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Mosaic -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-head light anim up">
+                <div class="gold-rule center"><span>What We Offer</span></div>
+                <h2>Comprehensive Dental Services</h2>
+                <p>Every treatment, every smile — crafted with skill and genuine compassion.</p>
+            </div>
+            <div class="services-mosaic">
+                <div class="svc-tile">
+                    <img src="assets/images/porcelain-veneers-near-me-tampa-fl.jpg" alt="Cosmetic Dentistry" loading="lazy">
+                    <div class="svc-tile-overlay">
+                        <span class="svc-tile-label">Transform Your Look</span>
+                        <h3>Cosmetic Dentistry</h3>
+                        <p>Veneers, whitening, bonding, SureSmile aligners, and more to craft your dream smile.</p>
+                        <a href="https://www.gentledentistrytampa.com/cosmetic-dentistry/" class="svc-tile-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="svc-tile">
+                    <img src="assets/images/dental-crowns-tampa-florida.jpg" alt="Restorative Dentistry" loading="lazy">
+                    <div class="svc-tile-overlay">
+                        <span class="svc-tile-label">Restore Your Smile</span>
+                        <h3>Restorative Dentistry</h3>
+                        <p>Implants, crowns, dentures, and full-mouth reconstruction to bring back your confidence.</p>
+                        <a href="https://www.gentledentistrytampa.com/dental-implants/" class="svc-tile-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="svc-tile">
+                    <img src="assets/images/teeth-whitening-near-me-tampa-fl.jpg" alt="Teeth Whitening" loading="lazy">
+                    <div class="svc-tile-overlay">
+                        <span class="svc-tile-label">Brighten &amp; Protect</span>
+                        <h3>Teeth Whitening</h3>
+                        <p>Professional-grade whitening treatments for fast, lasting, brilliant results.</p>
+                        <a href="https://www.gentledentistrytampa.com/teeth-whitening/" class="svc-tile-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="svc-tile">
+                    <img src="assets/images/cosmetic_dentistry_bg.jpg" alt="Preventive Dentistry" loading="lazy">
+                    <div class="svc-tile-overlay">
+                        <span class="svc-tile-label">Stay Ahead</span>
+                        <h3>Preventive Dentistry</h3>
+                        <p>Cleanings, oral cancer screenings, salivary testing, and hygiene education for lifelong health.</p>
+                        <a href="https://www.gentledentistrytampa.com/oral-hygiene/" class="svc-tile-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Section -->
+    <section class="doctor-section">
+        <div class="container">
+            <div class="doctor-grid">
+                <div class="doctor-photo-wrap anim scale">
+                    <img src="assets/images/dr-loc-tong.jpg" alt="Dr. Loc Tong" class="main-photo" loading="lazy">
+                    <div class="name-plate">Dr. Loc Tong</div>
+                </div>
+                <div class="doctor-content anim right">
+                    <div class="gold-rule"><span>Meet Your Doctor</span></div>
+                    <h2>Whole-Health Dental Care</h2>
+                    <span class="title-tag">General &amp; Cosmetic Dentist · Tampa, FL</span>
+                    <p>
+                        When you visit Gentle Dentistry, you can expect an experience that is more than simply
+                        filling teeth and cavities. Dr. Loc Tong understands that oral health is the gateway
+                        to overall health and well-being.
+                    </p>
+                    <div class="doctor-blockquote">
+                        <p>"A healthy and beautiful smile gives you confidence — and it's also a window into your body's overall wellness."</p>
+                    </div>
+                    <p>
+                        While a healthy smile will give you pride and self-confidence, Dr. Tong also considers
+                        the vital link between your dental and whole-body health in every treatment decision.
+                    </p>
+                    <a href="https://www.gentledentistrytampa.com/meet-your-doctors/" class="btn btn-green">Meet Dr. Tong</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Strip -->
+    <section class="features-strip">
+        <div class="container">
+            <div class="features-strip-grid">
+                <div class="fs-item anim up">
+                    <div class="fs-icon"><i class="fas fa-users"></i></div>
+                    <h4>Meet Our Team</h4>
+                    <p>Compassionate professionals dedicated to making every visit comfortable and welcoming.</p>
+                </div>
+                <div class="fs-item anim up" style="animation-delay:0.1s">
+                    <div class="fs-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h4>Why Patients Love Us</h4>
+                    <p>Read inspiring stories of patients whose lives and smiles were transformed by our care.</p>
+                </div>
+                <div class="fs-item anim up" style="animation-delay:0.2s">
+                    <div class="fs-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h4>Easy Scheduling</h4>
+                    <p>Flexible appointment times with online booking and same-day emergency availability.</p>
+                </div>
+                <div class="fs-item anim up" style="animation-delay:0.3s">
+                    <div class="fs-icon"><i class="fas fa-credit-card"></i></div>
+                    <h4>Affordable Options</h4>
+                    <p>Dental savings plans, flexible financing, and most insurance plans accepted.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="testimonials-layout">
+                <div class="testimonials-intro anim left">
+                    <div class="gold-rule"><span>Patient Reviews</span></div>
+                    <h2>Kind Words From Our Patients</h2>
+                    <p>Real experiences from real people who trust us with their smiles.</p>
+                    <div class="overall-rating">
+                        <div class="rating-score">4.9</div>
+                        <div>
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="rating-count">Based on 200+ Google Reviews</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials-cards">
+                    <div class="t-card anim up">
+                        <span class="quote-mark">"</span>
+                        <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="t-text">I had an amazing experience at Gentle Dentistry! Nikki was so kind, incredibly gentle, and very thorough with my cleaning and x-rays. Dr. Tong was very personable, caring, and well-spoken when explaining my treatment. Kelly at the front desk was also wonderful.</p>
+                        <div class="t-author">
+                            <div class="t-avatar">B</div>
+                            <div>
+                                <div class="t-name">Bayley Barnett</div>
+                                <div class="t-source"><i class="fab fa-google"></i> Google Review</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-card anim up" style="animation-delay:0.1s">
+                        <span class="quote-mark">"</span>
+                        <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="t-text">The Best Dentist Experience I have had. The office is warm and modern full of vibrant colors! My Hygienist Susie was informative and gentle. Dr. Tong is TRULY CARING AND GENUINE when it comes to treating the patient and their needs.</p>
+                        <div class="t-author">
+                            <div class="t-avatar">Z</div>
+                            <div>
+                                <div class="t-name">Zen Paul</div>
+                                <div class="t-source"><i class="fab fa-google"></i> Google Review</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-card anim up" style="animation-delay:0.2s">
+                        <span class="quote-mark">"</span>
+                        <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="t-text">Best dental office I have been to! The cleanings and exams are exceptional and very thorough. Everyone is so sweet and very welcoming. I highly recommend this office to anyone looking for a great dentist in Tampa.</p>
+                        <div class="t-author">
+                            <div class="t-avatar">M</div>
+                            <div>
+                                <div class="t-name">Maria Carter</div>
+                                <div class="t-source"><i class="fab fa-google"></i> Google Review</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="cta-band" style="background-image: url('assets/images/cosmetic_dentistry_bg.jpg');">
+        <div class="cta-band-overlay"></div>
+        <div class="container">
+            <div class="cta-band-grid">
+                <div class="cta-band-text anim left">
+                    <div class="gold-rule"><span>Cosmetic Dentistry</span></div>
+                    <h2>Redefine<br>Your Smile</h2>
+                    <p>Everyone deserves a beautiful, healthy smile. Let us help you unlock yours with our full range of cosmetic treatments.</p>
+                    <div class="cta-buttons" style="display:flex; gap:14px; flex-wrap:wrap;">
+                        <a href="https://www.gentledentistrytampa.com/cosmetic-dentistry/" class="btn btn-gold">Explore Cosmetic Services</a>
+                        <a href="https://www.gentledentistrytampa.com/appointment" class="btn btn-outline-white">Book a Consult</a>
+                    </div>
+                </div>
+                <div class="anim right">
+                    <ul class="cta-checklist">
+                        <li>
+                            <span class="check"><i class="fas fa-check"></i></span>
+                            <a href="https://www.gentledentistrytampa.com/porcelain-veneers/" class="cta-checklist-link" style="color:var(--white)">Porcelain Veneers</a>
+                        </li>
+                        <li>
+                            <span class="check"><i class="fas fa-check"></i></span>
+                            <a href="https://www.gentledentistrytampa.com/teeth-whitening/" style="color:var(--white)">Professional Teeth Whitening</a>
+                        </li>
+                        <li>
+                            <span class="check"><i class="fas fa-check"></i></span>
+                            <a href="https://www.gentledentistrytampa.com/dental-bonding/" style="color:var(--white)">Dental Bonding</a>
+                        </li>
+                        <li>
+                            <span class="check"><i class="fas fa-check"></i></span>
+                            <a href="https://www.gentledentistrytampa.com/suresmile/" style="color:var(--white)">SureSmile Aligners</a>
+                        </li>
+                        <li>
+                            <span class="check"><i class="fas fa-check"></i></span>
+                            <a href="https://www.gentledentistrytampa.com/porcelain-crowns/" style="color:var(--white)">Porcelain Crowns</a>
+                        </li>
+                        <li>
+                            <span class="check"><i class="fas fa-check"></i></span>
+                            <a href="https://www.gentledentistrytampa.com/smile-gallery/" style="color:var(--white)">View Smile Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / Articles -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="section-head anim up">
+                <div class="gold-rule center"><span>From Our Blog</span></div>
+                <h2>Latest Dental Insights</h2>
+                <p>Stay informed with expert advice from Dr. Tong and the Gentle Dentistry team.</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card anim up">
+                    <div class="blog-thumb">
+                        <img src="assets/images/teeth-whitening-near-me-tampa-fl.jpg" alt="Teeth Whitening Article" loading="lazy">
+                        <span class="blog-category">Cosmetic</span>
+                    </div>
+                    <div class="blog-body">
+                        <div class="blog-date"><i class="fas fa-calendar"></i> February 10, 2026</div>
+                        <h3><a href="https://www.gentledentistrytampa.com/teeth-whitening-near-me-tampa-fl/">Seven reasons why our patients love professional teeth whitening services</a></h3>
+                        <p>A bright and dazzling smile can do wonders for your confidence and professional teeth whitening delivers results you can see and feel.</p>
+                        <div class="blog-footer">
+                            <span class="blog-author"><i class="fas fa-user-md"></i> Dr. Loc Tong</span>
+                            <a href="https://www.gentledentistrytampa.com/teeth-whitening-near-me-tampa-fl/" class="btn-text" style="font-size:12px;">Read <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-card anim up" style="animation-delay:0.1s">
+                    <div class="blog-thumb">
+                        <img src="assets/images/dental-crowns-tampa-florida.jpg" alt="Dental Crowns Article" loading="lazy">
+                        <span class="blog-category">Restorative</span>
+                    </div>
+                    <div class="blog-body">
+                        <div class="blog-date"><i class="fas fa-calendar"></i> January 13, 2026</div>
+                        <h3><a href="https://www.gentledentistrytampa.com/dental-crowns-tampa-florida/">Seven benefits of choosing high-quality porcelain dental crowns from Gentle Dentistry</a></h3>
+                        <p>Dealing with a cracked tooth or severe tooth decay? Discover how porcelain crowns can restore your smile beautifully.</p>
+                        <div class="blog-footer">
+                            <span class="blog-author"><i class="fas fa-user-md"></i> Dr. Loc Tong</span>
+                            <a href="https://www.gentledentistrytampa.com/dental-crowns-tampa-florida/" class="btn-text" style="font-size:12px;">Read <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-card anim up" style="animation-delay:0.2s">
+                    <div class="blog-thumb">
+                        <img src="assets/images/porcelain-veneers-near-me-tampa-fl.jpg" alt="Porcelain Veneers Article" loading="lazy">
+                        <span class="blog-category">Cosmetic</span>
+                    </div>
+                    <div class="blog-body">
+                        <div class="blog-date"><i class="fas fa-calendar"></i> December 17, 2025</div>
+                        <h3><a href="https://www.gentledentistrytampa.com/porcelain-veneers-near-me-tampa-fl/">Seven Things to Know About Porcelain Veneers</a></h3>
+                        <p>Ready to unlock the secret to a stunning smile? Discover everything you need to know before considering porcelain veneers.</p>
+                        <div class="blog-footer">
+                            <span class="blog-author"><i class="fas fa-user-md"></i> Dr. Loc Tong</span>
+                            <a href="https://www.gentledentistrytampa.com/porcelain-veneers-near-me-tampa-fl/" class="btn-text" style="font-size:12px;">Read <span class="arrow-circle"><i class="fas fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-grid">
+            <div class="contact-info-panel">
+                <div class="gold-rule"><span>Get in Touch</span></div>
+                <h2>Healthy Smiles for Healthier Lives</h2>
+                <p class="subtitle">We'd love to welcome you to our practice. Reach out and schedule your visit today.</p>
+                <div class="contact-items">
+                    <div class="contact-item-row">
+                        <div class="contact-icon-circle"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-item-text">
+                            <strong>Call Us</strong>
+                            <a href="tel:+18137347102">(813) 734-7102</a>
+                        </div>
+                    </div>
+                    <div class="contact-item-row">
+                        <div class="contact-icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-item-text">
+                            <strong>Visit Us</strong>
+                            <a href="https://goo.gl/maps/FCMnUfA8d1eXCVJe7" target="_blank" rel="noopener">
+                                3500 E. Fletcher Ave, Suite #221<br>Tampa, FL 33613
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item-row">
+                        <div class="contact-icon-circle"><i class="fas fa-clock"></i></div>
+                        <div class="contact-item-text">
+                            <strong>Office Hours</strong>
+                            <span>Mon &ndash; Thu: 7:00 AM &ndash; 4:00 PM<br>Fri &ndash; Sun: Closed</span>
+                        </div>
+                    </div>
+                    <div class="contact-item-row">
+                        <div class="contact-icon-circle"><i class="fas fa-fax"></i></div>
+                        <div class="contact-item-text">
+                            <strong>Fax</strong>
+                            <span>(813) 977-0503</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top:36px;">
+                    <a href="https://www.gentledentistrytampa.com/appointment" class="btn btn-gold">Request an Appointment</a>
+                </div>
+                <p style="font-size:13px;color:rgba(255,255,255,0.3);margin-top:28px;">
+                    Proudly serving Wesley Chapel, Lutz, New Tampa, St. Petersburg, Brandon &amp; Riverview.
+                </p>
+            </div>
+            <div class="contact-map-panel">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.4951424240758!2d-82.4197416!3d28.070435800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c797a3f2a94b%3A0xeba1d4a78e8c9ee1!2sGentle%20Dentistry!5e0!3m2!1sen!2slk!4v1773675292372!5m2!1sen!2slk"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Gentle Dentistry Location">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/logo.png" alt="Gentle Dentistry Tampa">
+                    <p>We're proud to provide gentle, compassionate dental care to families throughout the Tampa Bay area since 1991.</p>
+                    <div class="social-row">
+                        <a href="https://www.facebook.com/GentleDentistryTampa" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/gentledentistrytampa/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/GentleDentistr5" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.yelp.com/biz/gentle-dentistry-tampa" target="_blank" rel="noopener" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+                        <a href="https://www.pinterest.com/gentledentistrytampa44/_saved/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="https://www.gentledentistrytampa.com/about-us/">About Us</a></li>
+                        <li><a href="https://www.gentledentistrytampa.com/meet-your-doctor/">Meet Dr. Tong</a></li>
+                        <li><a href="https://www.gentledentistrytampa.com/meet-our-team/">Our Team</a></li>
+                        <li><a href="https://www.gentledentistrytampa.com/blog/">Blog</a></li>
+                        <li><a href="https://www.gentledentistrytampa.com/smile-gallery/">Smile Gallery</a></li>
+                        <li><a href="https://www.gentledentistrytampa.com/contact-us/">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Serving Areas</h5>
+                    <ul>
+                        <li><a href="https://www.gentledentistrytampa.com/full-service-dental-office-chapel/">Wesley Chapel</a></li>
+                        <li><a href="https://www.gentledentistrytampa.com/common-dental-procedures-lutz/">Lutz</a></li>
+                        <li><a href="https://www.gentledentistrytampa.com/general-dentistry-procedures-new-tampa/">New Tampa</a></li>
+                        <li><a href="https://www.gentledentistrytampa.com/routine-dental-checkup-st-petersburg/">St. Petersburg</a></li>
+                        <li><a href="https://www.gentledentistrytampa.com/your-oral-health-and-wellness-brandon/">Brandon</a></li>
+                        <li><a href="https://www.gentledentistrytampa.com/your-oral-health-at-home-riverview/">Riverview</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Office Hours</h5>
+                    <div class="hours-grid">
+                        <div class="hours-row"><span class="day">Monday</span><span class="time">7:00 AM &ndash; 4:00 PM</span></div>
+                        <div class="hours-row"><span class="day">Tuesday</span><span class="time">7:00 AM &ndash; 4:00 PM</span></div>
+                        <div class="hours-row"><span class="day">Wednesday</span><span class="time">7:00 AM &ndash; 4:00 PM</span></div>
+                        <div class="hours-row"><span class="day">Thursday</span><span class="time">7:00 AM &ndash; 4:00 PM</span></div>
+                        <div class="hours-row"><span class="day">Friday</span><span class="closed">Closed</span></div>
+                        <div class="hours-row"><span class="day">Saturday</span><span class="closed">Closed</span></div>
+                        <div class="hours-row"><span class="day">Sunday</span><span class="closed">Closed</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gentle Dentistry. All Rights Reserved. Powered by <a href="https://www.ekwa.com" target="_blank" rel="noopener">Ekwa</a></p>
+                <div class="footer-legal-links">
+                    <a href="https://www.gentledentistrytampa.com/privacy-policy/">Privacy Policy</a>
+                    <a href="https://www.gentledentistrytampa.com/cookie-policy/">Cookie Policy</a>
+                    <a href="https://www.gentledentistrytampa.com/accessibility-statement/">Accessibility</a>
+                    <a href="https://www.gentledentistrytampa.com/site-map/">Site Map</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky header
+        const header = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 40);
+        });
+
+        // Mobile nav toggle
+        const navToggle = document.getElementById('navToggle');
+        const siteNav   = document.getElementById('siteNav');
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('open');
+            siteNav.classList.toggle('mobile-open');
+        });
+
+        // Mobile dropdown accordions
+        document.querySelectorAll('.has-dd > a').forEach(link => {
+            link.addEventListener('click', e => {
+                if (window.innerWidth < 768) {
+                    e.preventDefault();
+                    link.parentElement.classList.toggle('dd-open');
+                    const menu = link.nextElementSibling;
+                    if (menu) menu.style.display = menu.style.display === 'block' ? '' : 'block';
+                }
+            });
+        });
+
+        // Scroll reveal
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.style.animationDelay || '0s';
+                    setTimeout(() => entry.target.classList.add('is-visible'), parseFloat(delay) * 1000);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.anim').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
