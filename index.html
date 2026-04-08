@@ -490,88 +490,76 @@
         .doctor-content h2 { font-size: 38px; margin-bottom: 24px; }
         .doctor-content p { color: var(--text-light); margin-bottom: 32px; }
 
-        /* --- Services / Treatments --- */
+        /* --- Services / Problems Section --- */
         .services-section { padding: 100px 0; background: var(--off-white); }
-        .treatments-grid {
+        .problems-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            gap: 28px;
         }
-        .treatment-card {
-            display: flex;
-            flex-direction: column;
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 32px 28px;
+        .problem-card {
+            display: block;
             text-decoration: none;
-            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--white);
+            box-shadow: var(--shadow);
             transition: all var(--transition);
             position: relative;
+        }
+        .problem-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        .problem-img {
+            height: 200px;
             overflow: hidden;
+            position: relative;
         }
-        .treatment-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--blue), var(--accent));
-            transform: scaleX(0);
-            transition: transform var(--transition);
+        .problem-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
         }
-        .treatment-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-lg);
-            border-color: transparent;
+        .problem-card:hover .problem-img img { transform: scale(1.08); }
+        .problem-content {
+            padding: 24px 28px;
+            text-align: center;
         }
-        .treatment-card:hover::after { transform: scaleX(1); }
-        .treatment-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 14px;
-            background: var(--blue-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 18px;
-            transition: all var(--transition);
-        }
-        .treatment-icon svg {
-            color: var(--blue);
-            transition: color var(--transition);
-        }
-        .treatment-card:hover .treatment-icon {
-            background: var(--blue);
-        }
-        .treatment-card:hover .treatment-icon svg {
-            color: var(--white);
-        }
-        .treatment-card h3 {
+        .problem-question {
+            font-family: 'Playfair Display', serif;
             font-size: 18px;
-            font-family: 'Inter', sans-serif;
             font-weight: 700;
             color: var(--navy);
             margin-bottom: 8px;
+            line-height: 1.35;
         }
-        .treatment-card p {
-            font-size: 14px;
+        .problem-answer {
+            font-size: 13px;
             color: var(--text-light);
-            line-height: 1.6;
-            margin-bottom: 16px;
-            flex: 1;
+            line-height: 1.5;
+            margin-bottom: 14px;
         }
-        .treatment-link {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--blue);
+        .problem-cta {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: gap var(--transition);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            background: var(--blue);
+            padding: 10px 24px;
+            border-radius: 50px;
+            transition: all var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        .treatment-link i { font-size: 11px; }
-        .treatment-card:hover .treatment-link { gap: 12px; }
+        .problem-card:hover .problem-cta {
+            background: var(--navy);
+            gap: 10px;
+        }
+        .problem-cta i { font-size: 11px; }
 
         /* --- Success Stories --- */
         .success-stories { padding: 100px 0; }
@@ -874,7 +862,7 @@
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .stat-item:nth-child(2) { border-right: none; }
             .features-grid { grid-template-columns: repeat(2, 1fr); }
-            .treatments-grid { grid-template-columns: repeat(2, 1fr); }
+            .problems-grid { grid-template-columns: repeat(2, 1fr); }
             .hero-content h1 { font-size: 46px; }
             .about-grid { gap: 40px; }
             .doctor-grid { grid-template-columns: 1fr 1fr; }
@@ -897,7 +885,7 @@
             .about-content h2, .doctor-content h2 { font-size: 30px; }
             .doctor-grid { grid-template-columns: 1fr; text-align: center; }
             .doctor-image img { max-width: 340px; margin: 0 auto; }
-            .treatments-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+            .problems-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
             .testimonials-grid { grid-template-columns: 1fr; }
             .articles-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
             .cta-content h2 { font-size: 36px; }
@@ -1161,90 +1149,108 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section - Problem-Based -->
     <section class="services-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">What We Offer</span>
-                <h2>Popular Treatments</h2>
-                <p class="section-subtitle">Find the care you need &mdash; all under one roof</p>
+                <span class="section-label">How Can We Help?</span>
+                <h2>Do you need help with any of these?</h2>
+                <p class="section-subtitle">Click your concern &mdash; we'll show you the solution</p>
             </div>
-            <div class="treatments-grid">
-                <a href="#" class="treatment-card">
-                    <div class="treatment-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C10 2 8.5 3.5 8.5 5.5c0 1.5.8 2.8 2 3.5v2h3v-2c1.2-.7 2-2 2-3.5C15.5 3.5 14 2 12 2z"/><rect x="10" y="10.5" width="4" height="2" rx=".5"/><path d="M10.5 12.5L10 22h4l-.5-9.5"/><line x1="10" y1="15" x2="14" y2="15"/><line x1="10.2" y1="18" x2="13.8" y2="18"/></svg>
+            <div class="problems-grid">
+                <a href="#" class="problem-card">
+                    <div class="problem-img">
+                        <img src="assets/images/missing-teeth.jpg" alt="Close-up of a smile with a missing tooth — dental implants, bridges and dentures can help" loading="lazy">
                     </div>
-                    <h3>Dental Implants</h3>
-                    <p>Permanent tooth replacement that looks and feels natural.</p>
-                    <span class="treatment-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                    <div class="problem-content">
+                        <h3 class="problem-question">Missing Teeth?</h3>
+                        <p class="problem-answer">Dental implants, bridges, dentures &amp; All-on-X to restore your full smile.</p>
+                        <span class="problem-cta">See Solutions <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </a>
-                <a href="#" class="treatment-card">
-                    <div class="treatment-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3C7 3 5.5 5 5.5 7.5c0 2 1 3.5 2.5 4.5-.5 2-1.5 5-1.5 7 0 1.5 1 2.5 2.5 2.5s2.2-1.2 2.5-3c.3 1.8 1 3 2.5 3s2.5-1 2.5-2.5c0-2-1-5-1.5-7 1.5-1 2.5-2.5 2.5-4.5C17.5 5 16 3 13.5 3c-1 0-1.7.3-2 .8-.3-.5-1-.8-2-.8z"/><path d="M8 8.5l3.5 1 3.5-1" opacity=".5"/><path d="M12 14l-1.5-2m1.5 2l1.5-2" opacity=".4" stroke-width="1"/></svg>
+                <a href="#" class="problem-card">
+                    <div class="problem-img">
+                        <img src="assets/images/crooked-or-crowded-teeth.jpg" alt="Crooked and crowded teeth before SureSmile clear aligner treatment" loading="lazy">
                     </div>
-                    <h3>Teeth Whitening</h3>
-                    <p>Professional whitening for a brighter, more confident smile.</p>
-                    <span class="treatment-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                    <div class="problem-content">
+                        <h3 class="problem-question">Crooked or Crowded Teeth?</h3>
+                        <p class="problem-answer">SureSmile clear aligners straighten your smile discreetly &mdash; no metal braces.</p>
+                        <span class="problem-cta">See Solutions <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </a>
-                <a href="#" class="treatment-card">
-                    <div class="treatment-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3C7 3 5.5 5 5.5 7.5c0 2 1 3.5 2.5 4.5-.5 2-1.5 5-1.5 7 0 1.5 1 2.5 2.5 2.5s2.2-1.2 2.5-3c.3 1.8 1 3 2.5 3s2.5-1 2.5-2.5c0-2-1-5-1.5-7 1.5-1 2.5-2.5 2.5-4.5C17.5 5 16 3 14 3c-1 0-1.5.3-2 .8-.5-.5-1.5-.8-3-.8z"/><path d="M5 7h2M17 7h2" stroke-width="1" opacity=".4"/><path d="M3 5l1.5 2M21 5l-1.5 2" stroke-width="1" opacity=".3"/></svg>
+                <a href="#" class="problem-card">
+                    <div class="problem-img">
+                        <img src="assets/images/stained-or-yellow-teeth.jpg" alt="Stained and yellow teeth that can be treated with professional whitening or veneers" loading="lazy">
                     </div>
-                    <h3>Porcelain Veneers</h3>
-                    <p>Custom shells to fix chips, gaps, and discoloration.</p>
-                    <span class="treatment-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                    <div class="problem-content">
+                        <h3 class="problem-question">Stained or Yellow Teeth?</h3>
+                        <p class="problem-answer">Professional teeth whitening &amp; porcelain veneers for a brilliant, white smile.</p>
+                        <span class="problem-cta">See Solutions <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </a>
-                <a href="#" class="treatment-card">
-                    <div class="treatment-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 4C7.5 4 6 5.8 6 8c0 1.8 1 3.2 2.5 4-.5 1.8-1.5 4.5-1.5 6.5 0 1.2.8 2 2 2s1.8-1 2-2.5c.2 1.5.8 2.5 2 2.5s2-.8 2-2c0-2-1-4.7-1.5-6.5C15 10.2 16 8.8 16 7c0-2.2-1.5-3-3.5-3-.8 0-1.3.2-1.5.5-.2-.3-.7-.5-1.5-.5z"/><path d="M6 2l2 2.5M16 2l-2 2.5" stroke-width="1.5"/><path d="M4 3l1 1M18 3l-1 1" stroke-width="1" opacity=".5"/><path d="M5.5 1.5v1.5M16.5 1.5v1.5" stroke-width="1" opacity=".4"/></svg>
+                <a href="#" class="problem-card">
+                    <div class="problem-img">
+                        <img src="assets/images/chipped-or-broken-tooth.jpg" alt="Chipped and broken front tooth that can be repaired with bonding or a crown" loading="lazy">
                     </div>
-                    <h3>Crowns &amp; Bridges</h3>
-                    <p>Restore damaged teeth with durable, natural-looking crowns.</p>
-                    <span class="treatment-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                    <div class="problem-content">
+                        <h3 class="problem-question">Chipped or Broken Tooth?</h3>
+                        <p class="problem-answer">Dental bonding, crowns &amp; veneers to repair damage and protect your tooth.</p>
+                        <span class="problem-cta">See Solutions <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </a>
-                <a href="#" class="treatment-card">
-                    <div class="treatment-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10c0-3.5 3-6.5 7.5-6.5s7.5 3 7.5 6.5"/><path d="M4.5 10c0 2 .8 3.5 2 4.5v4c0 1 .5 2 2 2h7c1.5 0 2-1 2-2v-4c1.2-1 2-2.5 2-4.5"/><line x1="7" y1="10.5" x2="7" y2="13"/><line x1="10" y1="10" x2="10" y2="13.5"/><line x1="14" y1="10" x2="14" y2="13.5"/><line x1="17" y1="10.5" x2="17" y2="13"/></svg>
+                <a href="#" class="problem-card">
+                    <div class="problem-img">
+                        <img src="assets/images/cavity-or-tooth-decay.jpg" alt="Visible cavity and tooth decay requiring a filling or dental crown" loading="lazy">
                     </div>
-                    <h3>Dentures &amp; Overdentures</h3>
-                    <p>Full and partial options to restore your complete smile.</p>
-                    <span class="treatment-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                    <div class="problem-content">
+                        <h3 class="problem-question">Cavity or Tooth Decay?</h3>
+                        <p class="problem-answer">Tooth-colored fillings &amp; crowns to restore your tooth and stop decay.</p>
+                        <span class="problem-cta">See Solutions <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </a>
-                <a href="#" class="treatment-card">
-                    <div class="treatment-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c0-4 2-7 5-8.5M21 12c0-4-2-7-5-8.5"/><path d="M8 3.5C9 3 10.5 2.5 12 2.5S15 3 16 3.5"/><path d="M4 16c1 3 4 5.5 8 5.5s7-2.5 8-5.5"/><path d="M7 12h10" stroke-dasharray="2 2" opacity=".4"/><path d="M9 9l3 6 3-6" stroke-width="1.5"/></svg>
+                <a href="#" class="problem-card">
+                    <div class="problem-img">
+                        <img src="assets/images/tooth-ache-or-dental-emergency.jpg" alt="Woman holding her jaw in pain from a toothache needing emergency dental care" loading="lazy">
                     </div>
-                    <h3>SureSmile Aligners</h3>
-                    <p>Straighten your teeth discreetly with clear aligners.</p>
-                    <span class="treatment-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                    <div class="problem-content">
+                        <h3 class="problem-question">Toothache or Dental Emergency?</h3>
+                        <p class="problem-answer">Same-day emergency care for severe pain, infections &amp; dental injuries.</p>
+                        <span class="problem-cta">See Solutions <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </a>
-                <a href="#" class="treatment-card">
-                    <div class="treatment-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3C11 3 9.5 4.5 9.5 6.5c0 1.5.7 2.7 1.8 3.4-.4 1.5-1.3 4-1.3 5.6 0 1.2.8 2 2 2s1.8-1 2-2.5c.2 1.5.8 2.5 2 2.5s2-.8 2-2c0-1.6-.9-4.1-1.3-5.6 1.1-.7 1.8-1.9 1.8-3.4C18.5 4.5 17 3 15 3c-.7 0-1.2.2-1.5.5-.3-.3-.8-.5-1.5-.5z"/><circle cx="6" cy="12" r="3"/><line x1="6" y1="9" x2="6" y2="5"/><path d="M4.5 6.5L6 5l1.5 1.5"/><line x1="6" y1="15" x2="6" y2="19"/></svg>
+                <a href="#" class="problem-card">
+                    <div class="problem-img">
+                        <img src="assets/images/bleeding-or-sore-sums.jpg" alt="Inflamed and bleeding gums that may need deep cleaning or gum therapy" loading="lazy">
                     </div>
-                    <h3>Emergency Dentistry</h3>
-                    <p>Same-day care for toothaches, broken teeth, and injuries.</p>
-                    <span class="treatment-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                    <div class="problem-content">
+                        <h3 class="problem-question">Bleeding or Sore Gums?</h3>
+                        <p class="problem-answer">Deep cleanings, gum therapy &amp; preventive care to protect your oral health.</p>
+                        <span class="problem-cta">See Solutions <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </a>
-                <a href="#" class="treatment-card">
-                    <div class="treatment-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4C5.5 4 4.5 5.5 4.5 7c0 1.2.6 2.2 1.5 2.8-.3 1.2-.8 3-.8 4.2 0 1 .5 1.5 1.5 1.5s1.3-.7 1.5-1.8c.2 1.1.6 1.8 1.5 1.8s1.5-.5 1.5-1.5c0-1.2-.5-3-.8-4.2.9-.6 1.5-1.6 1.5-2.8 0-1.5-1-3-2.5-3-.5 0-.9.2-1.2.4-.3-.2-.7-.4-1.2-.4z"/><path d="M16 4c-1.5 0-2.5 1.5-2.5 3 0 1.2.6 2.2 1.5 2.8-.3 1.2-.8 3-.8 4.2 0 1 .5 1.5 1.5 1.5s1.3-.7 1.5-1.8c.2 1.1.6 1.8 1.5 1.8s1.5-.5 1.5-1.5c0-1.2-.5-3-.8-4.2.9-.6 1.5-1.6 1.5-2.8 0-1.5-1-3-2.5-3-.5 0-.9.2-1.2.4-.3-.2-.7-.4-1.2-.4z"/><path d="M3 19h18" stroke-width="1"/><path d="M5 19c0-1 1-2 3-2h8c2 0 3 1 3 2"/><path d="M8 21.5h8" stroke-width="1" opacity=".5"/></svg>
+                <a href="#" class="problem-card">
+                    <div class="problem-img">
+                        <img src="assets/images/sensitive-teeth.jpg" alt="Woman wincing from tooth sensitivity while eating cold food" loading="lazy">
                     </div>
-                    <h3>Full Mouth Reconstruction</h3>
-                    <p>Comprehensive treatment to completely rebuild your smile.</p>
-                    <span class="treatment-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                    <div class="problem-content">
+                        <h3 class="problem-question">Sensitive Teeth?</h3>
+                        <p class="problem-answer">Identify the cause &amp; get relief with targeted treatments and protective care.</p>
+                        <span class="problem-cta">See Solutions <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </a>
-                <a href="#" class="treatment-card">
-                    <div class="treatment-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="6"/><path d="M9 8.5c0 0 1.5 3 6 3" opacity=".5"/><path d="M12 16v3"/><path d="M9 21h6"/><path d="M8 4.5L6 2.5M16 4.5l2-2M12 3.5V1.5" stroke-width="1" opacity=".4"/><circle cx="10" cy="9" r=".5" fill="currentColor" stroke="none"/><circle cx="14" cy="9" r=".5" fill="currentColor" stroke="none"/></svg>
+                <a href="#" class="problem-card">
+                    <div class="problem-img">
+                        <img src="assets/images/facial-lines-&-wrinkles.jpg" alt="Woman examining facial lines and wrinkles that can be treated with Botox" loading="lazy">
                     </div>
-                    <h3>Botox &amp; Facial Aesthetics</h3>
-                    <p>Refresh your appearance with non-surgical facial treatments.</p>
-                    <span class="treatment-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                    <div class="problem-content">
+                        <h3 class="problem-question">Facial Lines &amp; Wrinkles?</h3>
+                        <p class="problem-answer">Botox &amp; facial aesthetics to refresh your look &mdash; right here at the dentist.</p>
+                        <span class="problem-cta">See Solutions <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </a>
             </div>
-            <div style="text-align:center; margin-top:40px;">
-                <a href="#about-us/" class="btn btn-primary">View All Services</a>
+            <div style="text-align:center; margin-top:48px;">
+                <a href="#" class="btn btn-primary">View All Services</a>
             </div>
         </div>
     </section>
